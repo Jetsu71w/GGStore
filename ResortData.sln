@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResortData", "ResortData\ResortData.csproj", "{BB80118E-1C47-44F4-B0D5-7B5343C334BB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GGStore", "GGStore\GGStore.vdproj", "{5307E836-5084-4910-B100-333D925264A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB80118E-1C47-44F4-B0D5-7B5343C334BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB80118E-1C47-44F4-B0D5-7B5343C334BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB80118E-1C47-44F4-B0D5-7B5343C334BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB80118E-1C47-44F4-B0D5-7B5343C334BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5307E836-5084-4910-B100-333D925264A4}.Debug|Any CPU.ActiveCfg = Debug
+		{5307E836-5084-4910-B100-333D925264A4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {507F0708-B2BC-45E0-828F-91EE18163A9E}
+	EndGlobalSection
+EndGlobal

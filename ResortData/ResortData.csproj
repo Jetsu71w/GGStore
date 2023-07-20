@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB80118E-1C47-44F4-B0D5-7B5343C334BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ResortData</RootNamespace>
+    <AssemblyName>ResortData</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="advice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advice.Designer.cs">
+      <DependentUpon>advice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advice1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advice1.Designer.cs">
+      <DependentUpon>advice1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advice2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advice2.Designer.cs">
+      <DependentUpon>advice2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advice3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advice3.Designer.cs">
+      <DependentUpon>advice3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advice4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advice4.Designer.cs">
+      <DependentUpon>advice4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exorders.Designer.cs">
+      <DependentUpon>exorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert.Designer.cs">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop.Designer.cs">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="st_headphone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="st_headphone.Designer.cs">
+      <DependentUpon>st_headphone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="st_keyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="st_keyboard.Designer.cs">
+      <DependentUpon>st_keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="st_microphone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="st_microphone.Designer.cs">
+      <DependentUpon>st_microphone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="st_mouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="st_mouse.Designer.cs">
+      <DependentUpon>st_mouse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="advice.resx">
+      <DependentUpon>advice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advice1.resx">
+      <DependentUpon>advice1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advice2.resx">
+      <DependentUpon>advice2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advice3.resx">
+      <DependentUpon>advice3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advice4.resx">
+      <DependentUpon>advice4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exorders.resx">
+      <DependentUpon>exorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insert.resx">
+      <DependentUpon>Insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="st_headphone.resx">
+      <DependentUpon>st_headphone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="st_keyboard.resx">
+      <DependentUpon>st_keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="st_microphone.resx">
+      <DependentUpon>st_microphone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="st_mouse.resx">
+      <DependentUpon>st_mouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nubwo Streaming Microphone M21  550 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HyperX รุ่น SoloCast  1,990 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HyperX QuadCast  4,390 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RAZER Seiren Elite  5,990 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HyperX รุ่น QuadCast S  5,990 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEADSET LOGITECH G435 LIGHTSPEED WIRELESS -BLUE &amp; RASPBERRY.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEADSET RAZER HAMMERHEAD PRO V21,990.00 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEADSET LOGITECH G335 WHITE2,090.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEADSET LOGITECH G333 BUFFY IN EAR WHITE1,690.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEADSET ASUS ROG CETRA II CORE %28IN EAR%291,990.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYBOARD MSI VIGOR GK60 MECHANICAL CHERRY RED SWITCH3,490.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYBOARD LOGITECH G213 PRODIGY MEMBRANE %28MEMBRANE%29 %28RGB LED%29 %28ENTH%291,290.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYBOARD LOGITECH G413 CARBON GAMING MECHANICAL ROMER-G TACTILE2,190.00 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYBOARD LOGITECH G512 CARBON [GX BLUE CLICKY SWITCH] THEN2,990.00 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEYBOARD AOC GK2001,290.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOUSE LOGITECH G304 LIGHTSPEED WIRELESS KDA LIMITED EDITION1,590.00 บาท.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOUSE RAZER DEATHADDER ELITE1,990.00.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOUSE EVGA X17 GAMING GREY2,990.00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOUSE CORSAIR SABRE RGB PRO CHAMPION SERIES1,990.00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOUSE NUBWO PLESIOS NM-89M PINK390.00 บาท.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trolley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gaming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advice.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
